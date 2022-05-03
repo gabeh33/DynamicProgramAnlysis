@@ -1,0 +1,9 @@
+1. In the total_allocs.png file, we can clearly see python allocating the most 
+heap chuncks comapred to any other process. Bash does start out ahead of python 
+for a brief period of time, and then we see sleep overtake bash near the end, due 
+to the 10 second sleep command panda runs. In total size, python is the clear winner
+with all other processes essentially staying at 0.
+2. At the start, there is a string of addresses that are not tainted. However, 
+shortly into the log we can see that about half of the bytes are tained and 
+leaving the network. By the end I would say about 60% of tained bytes reached
+the network

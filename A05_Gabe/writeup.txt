@@ -1,0 +1,6 @@
+Gabe Holmes - Writeup for Assignment 5
+1 (Reverse Engineering) - I started by finding the shortest input that would not cause a seg fault, and populated it with all A's. Then I used qira to locate my input in memory and see what was being done with it. I found it at line 218, and realized that there was a loop comparing characters in my input to those stored in a certain address. I used that as my input, found where it was failing now, and after changing the 5th character from n to m got my solution. 
+===============
+./crackme2 ezobmjdxizobnjd
+===============
+2 (Build your own Crackme) - My attempt at writing anti disassembly to trick ghirda was based around the assembly function provided in the starter code. Two methods I read about were disguising a non-conditional jump as a conditional jump, and the other was having two oppossing conditional jumps one after another. I tried to use these methods, though my assembly knowdlege is very limited, however I was able to get more convoluted output from ghirda. For making qira harder to use, I created my own compare function that xored the input with a secret string, and checked if that output matched the output of doing this with the correct password. This did make qira more complicated and much longer to look through, although it is still very possible to RE. 

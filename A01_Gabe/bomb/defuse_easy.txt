@@ -1,0 +1,14 @@
+set height 0
+set pagination off
+
+break 89
+commands
+set variable f = 0x555555555298
+c 
+end
+break 103
+commands
+set variable accumulator = 1258295
+c
+end 
+run 1 2 3 4 5 6 7 8 9 10 11 12 13

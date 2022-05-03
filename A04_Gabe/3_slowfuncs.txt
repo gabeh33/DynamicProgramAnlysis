@@ -1,0 +1,16 @@
+1. item::toolmods(). This function is one that appears at the top of my long 
+vertical stack of functions. It appears to cycle through all items and check 
+if is_toolmod() is true. A possible more efficient way to do this would to store
+a global list of toolmod items and reference that. 
+2. item_contents::has_pocket_type(pocket_type). Cycles through content array and checks 
+if the current content.is_type equals the given pocket_type. If any content is true 
+then the function returns true. A faster way would be to keep a counter of the 
+number of pocket_type contents, modify that whenever a new content element is 
+added to content, and reference it instead of looping. 
+3. map::get_vehicles(start, end). This function contains 4 nested for loops. 
+It seems to check chunks in the x,y, and z direction and see if they have 
+vehicles. Most of the time this is null and the function executes the 
+if statement and continues to the next iteration. It seems like storing
+this information with other information about chunks would be more 
+efficient then cycling through many (mostly empty) chunks looking 
+for vehicles. 

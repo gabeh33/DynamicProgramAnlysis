@@ -1,0 +1,21 @@
+set height 0
+set pagination off
+
+
+
+break 87 if idx == 0
+commands
+set variable commands[idx] = 0x555555555298
+c
+end
+break 87 if idx <= 5
+commands
+set variable commands[idx] = 0x555555555341
+c
+end
+break 87 if idx > 5
+commands
+set variable commands[idx]  = 0x555555555298
+c
+end
+run 33 1 2 17 37 40 25 200 95 0 0 0 0 0

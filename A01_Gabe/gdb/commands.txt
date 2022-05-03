@@ -1,0 +1,10 @@
+set height 0
+set pagination off
+set breakpoint pending on 
+
+starti
+while (1)
+echo TRACE : 
+p/x $pc
+si
+end

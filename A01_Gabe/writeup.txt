@@ -1,0 +1,13 @@
+Writeup for Gabe Holmes, Assignment 1
+1) I picked ls, pwd, and echo. ls generated results.txt.
+2) ls took 4 mins 2 seconds. pwd took 5 mins and 20 seconds. echo took 7 mins 5 seconds. 
+3) ls had 418,446 instructions, pwd had 263,397 instrucitons, and echo had 252,689 instructions.
+4) On average there were 946 instructions per second, or 0.00106 instructions per second
+5) My commands were able to output the addresses of instructions ran by alarming.c, simply by single stepping through each instruction using si. 
+6) Running this I got 125,374 instructions
+7) The approach I took was modifying the function f to always be add and not one that would 
+end the program, and then setting accumulator to the correct value to not print boom
+8) For ls there are 37 program counters, pwd has 21, and echo also has 21 program counters. This 
+is significantly less than GDB.
+9) The tools are not recording the same thing, dynamioRIO is recording the start and end of basic blocks while GDB was recording every single instruction, which there are significantly more of.
+10) 0.302 seconds for all programs, an average of 261 program counters per second, or 0.00383 seconds per program counter  
