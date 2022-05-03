@@ -1,4 +1,3 @@
-Writeup for Gabe Holmes, Assignment 1
 1) I picked ls, pwd, and echo. ls generated results.txt.
 2) ls took 4 mins 2 seconds. pwd took 5 mins and 20 seconds. echo took 7 mins 5 seconds. 
 3) ls had 418,446 instructions, pwd had 263,397 instrucitons, and echo had 252,689 instructions.
